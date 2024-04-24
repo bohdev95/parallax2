@@ -23,6 +23,7 @@ export default function Home() {
     axios.get("/api/profile")
     .then(({data}) => {
       setProfileData(data);
+      console.log("data");
     })
   }, []);
 

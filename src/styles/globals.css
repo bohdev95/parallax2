@@ -35,7 +35,9 @@ body {
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 html {
   -webkit-text-size-adjust: 100%;
-  line-height: 1.15
+  line-height: 1.15;
+  overflow: hidden;
+
 }
 
 body {
@@ -1745,6 +1747,7 @@ html:not(.has-scroll-smooth) .c-fixed {
   top: 50%;
   z-index: 1;
   border-radius: 1rem;
+  transition: transform .6s cubic-bezier(.17, .67, .3, 1.33);
 }
 
 .c-speed-block_bubble.-right {
@@ -1767,7 +1770,6 @@ html:not(.has-scroll-smooth) .c-fixed {
 
 .c-speed-block_bubble:before {
   bottom: 0;
-  content: "";
   left: 0;
   right: 0;
   position: absolute;
@@ -1785,7 +1787,7 @@ html:not(.has-scroll-smooth) .c-fixed {
 
 @media (max-width:1199px) {
   .c-speed-block_bubble {
-      display: none
+    display: none
   }
 }
 
