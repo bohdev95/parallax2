@@ -169,6 +169,13 @@
   dependencies:
     tslib "^2.4.0"
 
+"@types/jquery@^3.5.29":
+  version "3.5.29"
+  resolved "https://registry.npmjs.org/@types/jquery/-/jquery-3.5.29.tgz"
+  integrity sha512-oXQQC9X9MOPRrMhPHHOsXqeQDnWeCDT3PelUIg/Oy8FAbzSZtFHRjc7IpbfFVmpLtJ+UOoywpRsuO5Jxjybyeg==
+  dependencies:
+    "@types/sizzle" "*"
+
 "@types/json5@^0.0.29":
   version "0.0.29"
   resolved "https://registry.npmjs.org/@types/json5/-/json5-0.0.29.tgz"
@@ -200,6 +207,11 @@
   dependencies:
     "@types/prop-types" "*"
     csstype "^3.0.2"
+
+"@types/sizzle@*":
+  version "2.3.8"
+  resolved "https://registry.npmjs.org/@types/sizzle/-/sizzle-2.3.8.tgz"
+  integrity sha512-0vWLNK2D5MT9dg0iOo8GlKguPAU02QjmZitPEsXRuJXU/OGIOt9vT9Fc26wtYuavLxtO45v9PGleoL9Z0k1LHg==
 
 "@typescript-eslint/parser@^5.4.2 || ^6.0.0 || 7.0.0 - 7.2.0":
   version "7.2.0"
