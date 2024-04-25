@@ -901,7 +901,7 @@ footer {
 }
 
 .mt-15 {
-  margin-top: 8rem;
+  margin-top: 15rem;
 }
 
 .d-none {
@@ -1785,12 +1785,6 @@ html:not(.has-scroll-smooth) .c-fixed {
   transition-delay: .3s
 }
 
-@media (max-width:1199px) {
-  .c-speed-block_bubble {
-    display: none
-  }
-}
-
 .c-direction-block_wrapper {
   margin-bottom: 31.25rem
 }
@@ -1911,6 +1905,7 @@ html:not(.has-scroll-smooth) .c-fixed {
   margin: auto;
   color: rgb(226, 224, 224);
   font-size: 1rem !important;
+  display: block;
 }
 
 .c-lerp-block {

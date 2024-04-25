@@ -9,11 +9,10 @@ type Props = {
 export default function Profile({imageUrl, fullname}: Props) {
     
     return (
-        <Parallax speed={-10}>
-           <img id="o-arender-img" src={`/assets/img/${imageUrl}`} width="100%" alt="image" />
-           <span id="profile-name" className="c-speed-block_bubble" data-scroll data-scroll-speed="4"
+        <Parallax speed={-10} translateY={[-10, 0]}>
+            <img id="o-arender-img" src={`/assets/img/${imageUrl}`} width="100%" alt="image" />
+            <span id="profile-name" className="c-speed-block_bubble profile-name" data-scroll data-scroll-speed="4"
                 data-scroll-call="dynamicColor" data-scroll-repeat>
-                
                 {fullname}
                
             </span>
