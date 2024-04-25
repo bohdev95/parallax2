@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { profileType } from '@/config/config';
 import Item from './item';
+import styles from "@/styles/Home.module.css";
 
 type Props = {
     data: profileType;
@@ -9,7 +10,7 @@ type Props = {
 export default function Details({data}: Props) {
     
     return (
-        <div className="o-info-wrapper o-layout_item u-3/5@from-medium">
+        <div className={styles.details}>
             <Item title="Birthday" data={[data.birthdate]}/>
             <Item title="Birth place" data={[data.place_of_birth]} />
             <Item title="Basic info" data={[data.basic_info]}/>

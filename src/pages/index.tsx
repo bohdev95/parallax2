@@ -6,20 +6,12 @@ import Layouts from "@/layouts/layouts";
 import axios from "axios";
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { profileType } from '@/config/config';
-import '@/styles/Home.module.css';
+import styles from "@/styles/Home.module.css";
 
 export default function Home() {
   const [profileData, setProfileData] = useState<profileType>();
-  
-
   useEffect(() => {
     
-    const script = document.createElement("script");
-    script.src = "/assets/scripts/main.js";
-    script.async = true;
-
-    document.body.appendChild(script);
-
     axios.get("/api/profile")
     .then(({data}) => {
       setProfileData(data);
@@ -30,7 +22,7 @@ export default function Home() {
   return (
     <Layouts>
       <ParallaxProvider>
-        <section className="c-section" data-scroll-section>
+        <section>
           {
             profileData?<>
               <Profile imageUrl={profileData.photo_url} fullname={profileData.name}/>
@@ -39,7 +31,7 @@ export default function Home() {
             </> : null
           }  
         </section>
-        <footer className="c-section" data-scroll-section>
+        <footer className={styles.footer}>
           <span>xxxx.com 2024</span>
         </footer>
       </ParallaxProvider>

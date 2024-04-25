@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Parallax} from 'react-scroll-parallax';
+import { useParallax} from 'react-scroll-parallax';
+import styles from "@/styles/Home.module.css";
 
 type Props = {
     title: string;
@@ -7,30 +8,33 @@ type Props = {
   };
 
 export default function Item({title, data}: Props) {
+
+    const parallax = useParallax<HTMLDivElement>({
+        easing: [0, 1.34, 0.5, 0.75],
+        translateX:[-10, 10]
+    });
     
     return (
-        <Parallax speed={-10}>
-            <div className="c-lerp-block">
-                <span className="c-lerp-block_index" data-scroll data-scroll-delay="0.2"
-                    data-scroll-speed="6" data-scroll-call="dynamicColor" data-scroll-repeat>
-                    {title}:
-                </span>
-                <span className="c-lerp-block_title" data-scroll data-scroll-delay="0.2"
-                    data-scroll-speed="6">
-                    { data && data.length > 0 ? data.map((o, i) => {
-                        if (i > 0){
-                            return <div key={i}>
-                                <br />
-                                { o }
-                            </div>
-                        } else {
-                            return o;
-                        }
-                        
-                    }) : ""
-                    }
-                </span>
+        
+        <div className={styles.item} ref={parallax.ref}>
+            <div className={styles.title}>
+                {title}:
             </div>
-        </Parallax>
+            <div className={styles.content}>
+                { data && data.length > 0 ? data.map((o, i) => {
+                    if (i > 0){
+                        return <div key={i}>
+                            <br />
+                            { o }
+                        </div>
+                    } else {
+                        return o;
+                    }
+                    
+                }) : ""
+                }
+            </div>
+        </div>
+       
     );
 }

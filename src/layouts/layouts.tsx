@@ -1,4 +1,5 @@
 import * as React from 'react';
+import styles from '@/styles/Home.module.css';
 
 interface Props {
     children : JSX.Element;
@@ -7,13 +8,9 @@ interface Props {
 export default function Layouts({ children } : Props) {
     
     return (
-        <>
-            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css" />
-            <div className="o-scroll" id="js-scroll" data-horizontal="hj" data-scroll-container>
-            
+        <main className={styles.main}>
             {children}
-        </div>
-        </>
+        </main>
         
     );
 }
