@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Parallax, useParallax } from 'react-scroll-parallax';
+import { ParallaxProvider, useParallax } from 'react-scroll-parallax';
 import styles from "@/styles/Home.module.css";
 
 type Props = {
@@ -31,6 +31,7 @@ export default function Profile({imageUrl, fullname}: Props) {
             <div ref={parallax.ref} className={styles.username}>
                 {fullname}               
             </div>
+            
         </div>
     );
 }

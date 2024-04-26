@@ -21,9 +21,6 @@ export default function Transactions({data}: Props) {
     const [transactions, setTransactions] = useState<Transaction[]>([]);
     const [globalFilter, setGlobalFilter] = useState<string>('');
 
-    const formatCurrency = (value: number) => {
-        return value.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
-    };
     useEffect(() => {
         setTransactions(data.transactions);
     }, []);

@@ -8,9 +8,9 @@ interface Props {
 export default function Layouts({ children } : Props) {
     
     return (
-        <main className={styles.main}>
+        <div className={styles.main}>
             {children}
-        </main>
+        </div>
         
     );
 }

@@ -11,7 +11,7 @@ export default function Item({title, data}: Props) {
 
     const parallax = useParallax<HTMLDivElement>({
         easing: [0, 1.34, 0.5, 0.75],
-        translateX:[-10, 10]
+        translateX:[-20, 0]
     });
     
     return (

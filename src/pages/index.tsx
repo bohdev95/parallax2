@@ -4,9 +4,9 @@ import Details from "../components/details";
 import Transactions from "../components/transactions";
 import Layouts from "@/layouts/layouts";
 import axios from "axios";
-import { ParallaxProvider } from 'react-scroll-parallax';
 import { profileType } from '@/config/config';
 import styles from "@/styles/Home.module.css";
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 export default function Home() {
   const [profileData, setProfileData] = useState<profileType>();
@@ -15,26 +15,26 @@ export default function Home() {
     axios.get("/api/profile")
     .then(({data}) => {
       setProfileData(data);
-      console.log("data");
     })
   }, []);
 
   return (
     <Layouts>
-      <ParallaxProvider>
+      <div className={styles.container}>
         <section>
           {
-            profileData?<>
+            profileData?<ParallaxProvider>
               <Profile imageUrl={profileData.photo_url} fullname={profileData.name}/>
               <Details data={profileData}/>
               <Transactions data={profileData}/>
-            </> : null
+            </ParallaxProvider> : null
           }  
         </section>
         <footer className={styles.footer}>
-          <span>xxxx.com 2024</span>
+          <div>xxxx.com 2024</div>
         </footer>
-      </ParallaxProvider>
+      
+      </div>
     </Layouts>
      
     

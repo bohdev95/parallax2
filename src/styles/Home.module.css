@@ -1,10 +1,9 @@
+.container{
+  width: 100vw;
+}
 .main {
   min-height: 100vh;
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background: linear-gradient(to right, #00162c, #450270);
   position:absolute;
   top: 0;
@@ -40,6 +39,7 @@
 .item{
   display: flex;
   flex-direction: row;
+  margin-left: 10%;
 }
 .title{
   font-size: 36px;
